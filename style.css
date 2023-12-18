@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: main;
+}
+
+body {
+    background-color: #141414;
+    background-image: url(img/pizza.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35%;
+    height: 100vh;
+}
+
+hr {
+    width: 47%;
+    margin: 0 auto;
+    animation: appear 1.6s;
+    height: 1px;
+    background: white;
+    margin-bottom: 40px;
+}
+
+@keyframes appear {
+    0% {
+        width: 0%;
+    }
+
+    14% {
+        width: 0%;
+    }
+
+    100% {
+        width: 47%;
+    }
+    
+}
+
+@font-face {
+    font-family: main;
+    src: url(fonts/Preahvihear/Preahvihear-Regular.ttf);
+}
+
+#content {
+    position: relative;
+    animation-play-state: running;
+}
+
+.jebise {
+    animation: fade-inn 0.5s;
+}
+
+@keyframes fade-inn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+#fader {
+    background-color: #000;
+    z-index: 1000;
+    height: 100vh;
+}
+
+.molimte {
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+
+p,a,h1,h2 {
+    color: white;
+}
+
+header {
+    height: 55px;
+    background-color: brown;
+    padding: 5px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 25px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;  
+  gap: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+ul:hover {
+    cursor: pointer;
+}
+
+.hero {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(img/bg-pizza.jpg);
+    position: relative;
+    background-attachment: fixed;
+    gap: 80px;
+}
+
+.hero::after, .hero-home::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.65);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero > *, .hero-home > * {
+    z-index: 100;
+    position: relative;
+}
+
+#hero img {
+    width: 70%;
+    height: 55%;
+    border-radius: 15px;
+    border: brown solid 4px;
+}
+
+#leftHero, #rightHero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+article {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: brown;
+}
+
+
+/* Home */
+
+.hero-home {
+    text-align: center;
+    height: 650px;
+    background-image: url(img/bg-home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 63%;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.hero-home div {
+    top: 25%;
+}
+
+.hero-home p, .hero-home h1, .hero-home a{
+    color: #fff;
+}
+
+.hero-home h1 {
+    font-size: 50px;
+}
+
+.hero-home a {
+    position: relative;
+    border: 2px solid #fff;
+    padding: 2px 20px;
+    top: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+.hero-home a:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: bolder;
+}
